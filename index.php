@@ -1,8 +1,6 @@
 <?php 
 $errores = '';
 $enviado = '';
-#$nombre = isset($_GET['nombre']) ? $_GET['nombre'] : 'Anonimo';
-#$nombre = $_GET['nombre'] ?? 'Anonimo';
 if (isset($_POST['submit'])) {
 	$nombre = $_POST['nombre'];
 	$correo = $_POST['correo'];
@@ -34,7 +32,7 @@ if (isset($_POST['submit'])) {
 	}
 
 	if (!$errores) {
-		$enviar_a = 'manuelmannuel@gmail.com';
+		$enviar_a = 'tucorreo@dominio.com';
 		$asunto = 'Correo Formulario contacto';
 		$mensaje_preparado = "De: $nombre \n";
 		$mensaje_preparado .= "Correo: $correo \n";
